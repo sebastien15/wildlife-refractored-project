@@ -1,5 +1,5 @@
 import Util from '../helpers/Util';
-import AdminService  from '../services/AdminService';
+import AdminService  from '../services/adminService';
 const util = new Util();
 
 const AdminExist = async (req,res,next)=>{
