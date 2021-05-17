@@ -1,0 +1,523 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+main{
+    padding: 0em 2em;
+}
+section{
+    margin: 10em 0em;
+}
+.disNone{
+    display: none !important;
+}
+.error{
+    color: red;
+    padding: 1px;
+    font-size: 10px;
+    margin-top: 2px;
+}
+#webTitle{
+    display: none;
+}
+#phoneDrawer{
+    display: none;
+}
+
+#navigation{
+  padding: 2em;
+  padding-top: 2.5em;
+  display: flex; 
+  justify-content: space-between;
+  box-shadow: 0 0 5px;
+  height: 10vh;
+}
+.accountBtn{
+    background-color: transparent;
+    border: 1px solid #F9813A;
+    padding: 0.5em;
+    cursor: pointer;
+
+}
+.accountBox{
+    border: 1px solid #F9813A;
+    border-radius: 5px;
+    background-color: white;
+    padding: 1em;
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+.accountBox button{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #F9813A
+}
+.signupModal{
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    padding: 1.5em;
+    border: 1px solid #F9813A;
+    border-radius: 5px;
+    background-color: white;
+    width: 40vw;
+}
+.loginModal{
+    position: fixed;
+    top: 30vh;
+    left: 30vw;
+    padding: 1.5em;
+    border: 1px solid #F9813A;
+    border-radius: 5px;
+    background-color: white;
+    width: 40vw;
+}
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.modalHeader header{
+    font-size: 28px;
+}
+.modalHeader span{
+    cursor: pointer;
+}
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.formGroup label{
+    margin-bottom: 0.5em;
+}
+.formGroup input{
+    padding: 8px;
+}
+.submitbtn{
+    padding: 4px;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #F9813A;
+    font-size: 18px;
+    margin-top: 1em;
+}
+.submitbtn:hover{
+    background: #F9813A;
+    color:#1A1C20;
+}
+/** landing section starts **/
+#Layer_1{
+    margin-top: -10vh;
+    width: 90%;
+}
+.linkNavigation{
+    text-decoration: none;
+    color:#F9813A;
+    cursor: pointer;
+    margin-right: 1em;
+}
+.linkNavigation:hover{
+    border-bottom:1px solid #F9813A;
+}
+#landingSection{
+    display: flex;
+    height: 90vh;
+    margin: 0em 0em;
+    padding-top: 10em;
+}
+#landingSection div{
+    width: 50%;
+    padding: 1em;
+}
+#landingSection article{
+    width: 50%;
+    padding: 1em;
+}
+
+#landingIntroHeading{
+    font-family: 'Mystery Quest', cursive;
+    color: #F9813A;
+    font-size: 1.4em;
+}
+#landingIntro{
+    margin-top: 2em;
+    line-height: 1.5em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #1A1C20;
+    font-size: 1.2em;
+}
+/** landing section ends **/
+
+.headers{
+    font-family: 'Mystery Quest', cursive;
+    color: #F9813A;
+    text-align: center;
+    margin: 4em;
+    font-size: 1.5em;
+}
+
+/** about section starts **/
+
+#aboutParagraph{
+    width: 80%;
+    margin:auto;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/** about section ends **/
+/** gallery section starts **/
+#gallery{
+    max-width: 100%;
+    padding: 2em;
+    display: flex;
+}
+.galleryCol{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 33%;
+    min-height: 100%;
+    background: #000;
+}
+#img1 #img2{
+    min-height: 50%;
+}
+#img3{
+    min-height: 60%;
+}
+#img4{
+    min-height: 40%;
+}
+#img5{
+    min-height: 100%;
+}
+
+/** gallery section ends **/
+
+/** footer section starts **/
+#footerSection{
+    text-align: center;
+    color: #F9813A;
+}
+#footerSection .headers{
+    margin-bottom: 1em;
+}
+.socialLink{
+    text-decoration: none;
+    color: #F9813A;
+    cursor: pointer;
+}
+.socialLink:hover{
+    opacity: 0.8;
+}
+#copyrighttext{
+    margin-top: 3.5em;
+}
+/** footer section ends **/
+
+
+/* animals page css starts */
+#bodySection{
+    display: flex;
+    flex-wrap: wrap;
+}
+.singleBlog {
+    width: 50%;
+    padding: 3em;
+    position: relative;
+    text-decoration: none;
+}
+.marker{
+    position: absolute;
+    padding: 1em;
+    background: #000;
+    color: white;
+    transform: rotate(90)
+}
+.imgBox{
+    max-width: 100%;
+}
+.img{
+    min-width: 100%;
+    max-height: 50vh;
+}
+.nameHolder{
+    padding: 2em 0em;
+    font-family: 'Mystery Quest', cursive;
+    color: #F9813A;
+    font-size: 1.3em;
+}
+.titleAndActions{
+    display: flex;
+    justify-content:space-between;
+}
+.titleAndActions a{
+    font-size: 16px;
+    text-decoration: none;
+}
+.accountBox{
+    margin-top: 40%;
+}
+
+.accountBtn:hover{
+    background-color: #F9813A;
+}
+/* single animal page css starts*/
+#singleAnimal{
+    width: 70%;
+    margin: auto;
+}
+#fimage{
+    height: 60vh;
+    width: 100%;
+}
+#animalDescription{
+    margin-top: 4vh;
+}
+
+.actionBtn{
+    border: 1px solid #F9813A;
+    color: #1A1C20;
+    padding: 0.5em;
+    background: transparent;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.actionBtn:hover{
+    background: #f9813a;
+    color: white;
+}
+.titleHolder{
+    display: flex;
+    justify-content: space-between;
+    width: 83%;
+    margin: auto;
+    padding-right: 5.5em;
+}
+.actionBox{
+    padding-top: 5em;
+}
+
+/* add animal page designs */
+
+#saveAnimalForm, #editAnimalForm{
+    padding: 1em;
+    border: 1px solid #F9813A;
+    width: 60%;
+    margin: auto;
+}
+.inputGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+.inputGroup label{
+    margin-bottom: 5px;
+}
+.inputGroup input{
+    padding: 5px;
+    font-size: 14px;
+}
+.inputGroup select{
+    padding: 5px;
+    font-size: 14px;
+}
+.inputGroup textarea{
+    padding: 5px;
+    font-size: 14px;
+}
+.inputGroup button{
+    padding: 4px;
+    cursor: pointer;
+}
+@media screen and (max-width: 425px){
+    #webTitle{
+        display: block;
+        color: #F9813A;
+    }
+    .Modal{
+        width: 90% !important;
+        left: 5%;
+        top: 10%;
+        z-index: 10;
+    }
+    #phoneDrawer{
+        display: flex;
+        flex-direction: column;
+        min-height: 10px;
+        cursor: pointer;
+    }
+    #linkNavigations{
+        display: none;
+    }
+    #accountNavigation{
+        display: none;
+    }
+    .drawerbar1, .drawerbar2, .drawerbar3{
+        background: #F9813A;
+        padding: 2px;
+        min-width: 30px;
+        margin-bottom: 2px;
+    }
+    #moboNav{
+        background: white;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 10.5vh;
+        z-index: 10;
+        width: 40%;
+        right: 0px;
+        padding-bottom: 0.8em 0.2em 0.4em 0.4em;
+        align-items: flex-end;
+        box-shadow: 0 0 5px;
+    }
+    #moboNav ul{
+        list-style: none;
+    }
+    #moboNav ul li{
+        margin: 2px 0px;
+        padding: 2px;
+    }
+
+    .modalBtn{
+        background: none;
+        color: #F9813A;
+        border: 0px;
+    }
+    .rotate45{
+        transform: translateY(5px) rotate(45deg);
+    }
+    .rotate-45{
+        transform: translateY(-1px)  rotate(-45deg);
+    }
+
+     /* index styles */
+
+    .headers{
+        font-size: 18px;
+        width: 80%;
+        margin: 10px auto;
+    }
+    #landingSection{
+        display: flex;
+        flex-direction: column;
+        padding-top: 8em;
+    }
+    #landingSection div{
+        width: 100%;
+        text-align: center;
+    }
+    #Layer_1{
+        width: 50%;
+    }
+    #landingSection article{
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        margin-top: 2em;
+    }
+    #landingIntro{
+        font-size: 18px;
+    }
+    #aboutSection .headers{
+        font-size: 18px;
+    }
+    #aboutParagraph{
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    #gallery{
+        flex-direction: column;
+        width: 100%;
+    }
+    .galleryCol{
+        width: 100%;
+        background: transparent;
+    }
+    .galleryImg{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    /* animal page */
+
+    #bodySection{
+        flex-direction: column;
+    }
+    #animalsPageHeader{
+        margin-top: 4em;
+    }
+    .singleBlog{
+        width: 100%;
+        padding: 0px;
+        margin-top: 40px;
+    }
+    /* .imgBox{
+        width: 100%;
+    } */
+    .img{
+        width: 100%;
+    }
+    .marker{
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .titleAndActions a{
+        font-size: 12px;
+        text-decoration: none;
+    }
+    .titleAndActions a p{
+        padding: 4px;
+    }
+    #bodySection div:last-child{
+        font-size: 14px;
+    }
+
+    /* add animal and edit animal */
+    #saveAnimalForm, #editAnimalForm{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .formPageHeader{
+        margin: 50px auto;
+    }
+
+    /* single page designs  */
+    .titleHolder{
+        display: flex;
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 30px;
+    }
+
+    .titleHolder .actionBox{
+        padding-top: 6px;
+        width: 50%;        
+    }
+    .actionBtn{
+        font-size: 10px;
+    }
+    #singleAnimalMain{
+        padding: 0px;
+    }
+    #singleAnimal{
+        margin-bottom: 100px;
+    }
+    #fimage{
+        height: auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red20\green20\blue20;\red226\green226\blue226;\red20\green20\blue20;
+\red226\green226\blue226;}
+{\*\expandedcolortbl;;\cssrgb\c10196\c10196\c10196;\cssrgb\c90980\c90980\c90980;\cssrgb\c10196\c10196\c10196;
+\cssrgb\c90980\c90980\c90980;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl500\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Photo by\'a0{\field{\*\fldinst{HYPERLINK "https://www.pexels.com/@alex-andrews-271121?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"}}{\fldrslt 
+\f1\b Alex Andrews}}\'a0from\'a0{\field{\*\fldinst{HYPERLINK "https://www.pexels.com/photo/photo-of-fox-sitting-on-ground-2295744/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"}}{\fldrslt 
+\f1\b Pexels}}\cb1  for Andrews image\
+\pard\pardeftab720\sl500\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \strokec4 Photo by\'a0{\field{\*\fldinst{HYPERLINK "https://www.pexels.com/@dsd-143941?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"}}{\fldrslt 
+\b DSD}}\'a0from\'a0{\field{\*\fldinst{HYPERLINK "https://www.pexels.com/photo/close-up-photo-of-monkey-on-tree-branch-1829979/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels"}}{\fldrslt 
+\b Pexels}}\cb1 \
+\pard\pardeftab720\sl340\partightenfactor0
+
+\fs28 \cf4 \
+}

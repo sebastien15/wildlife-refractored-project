@@ -1,0 +1,39 @@
+<%- include('header'); %>
+<main>
+    <header class="headers formPageHeader">Our Beautiful Wildlife habitants</header>
+    <div id="bodySection">
+        <form enctype="multipart/form-data" id="saveAnimalForm">
+            <div class="inputGroup">
+                <label>Tite:</label>
+                <input type="text"name="title"/>
+                <p class="error" id="titleError"></p>
+            </div>
+            <div class="inputGroup">
+                <label>status:</label>
+                <select name="status">
+                    <option value="in danger">In danger</option>
+                    <option value="not in danger">Not danger</option>
+                </select>
+
+            </div>
+            <div class="inputGroup">
+                <label>Description:</label>
+                <textarea name="description"></textarea>
+                <p class="error" id="descError"></p>
+            </div>
+            <div class="inputGroup">
+                <label>Image:</label>
+                <input type="file" name="fImage"/>
+                <p class="error" id="fImageError"></p>
+            </div>
+            <div class="inputGroup">
+                <button type="submit">Save</button>
+            </div>
+        </form>
+
+    </div>
+</main>
+<%- include('signupModal'); %>
+<%- include('loginModal'); %>
+
+<%- include('footer'); %>

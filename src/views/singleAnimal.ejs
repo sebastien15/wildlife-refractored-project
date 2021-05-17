@@ -1,0 +1,23 @@
+<%- include('header'); %>
+<main id="singleAnimalMain">
+    <div class="titleHolder">
+        <header class="headers"><%= animal.title %></header>
+        <div class="actionBox">            
+            <a href="/editAnimal/<%= animal.id%>" class="actionBtn" >edit</a>
+            <button class="actionBtn delBtn" data-doc="<%= animal.id%>" >delete</button>
+        </div>
+    </div>
+    <div id="singleAnimal">
+        <article>
+            <img id="fimage" src="/assets/images/<%=animal.fImage%>"/>
+            <%= animal.status %>
+            
+            <p id="animalDescription">
+                <%= animal.description %>
+            </p>
+        </article>
+    </div>
+</main>
+<%- include('signupModal'); %>
+<%- include('loginModal'); %>
+<%- include('footer'); %>

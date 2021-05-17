@@ -1,0 +1,32 @@
+<%- include('header'); %>
+<main>
+    <header class="headers" id="animalsPageHeader">Our Beautiful Wildlife habitants</header>
+    <div id="bodySection">
+        <% if(animals.length) {%>
+            <% for(var i = 0; i< animals.length; i++) { %>
+                <div class="singleBlog" >
+                    <div class="marker"><%= animals[i].status%></div>
+                    <div class="imgBox">
+                        <a href="/singleAnimal/<%= animals[i].id%>">
+                            <img class="img" src="/assets/images/<%=animals[i].fImage%>"/>
+                        </a>
+                    </div>
+                    <div class="titleAndActions">
+                        <a href="/singleAnimal/<%= animals[i].id%>">
+                            <p class="nameHolder"><%= animals[i].title%></p>
+                        </a>
+                    </div>
+                    <div>
+                        <p>
+                            <%= animals[i].description%>
+                        </p>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</main>
+<%- include('signupModal'); %>
+<%- include('loginModal'); %>
+
+<%- include('footer'); %>

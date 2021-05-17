@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wild life</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400;1,700&family=Mystery+Quest&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav id="navigation">
+    <span id="webTitle">Wildlife</span>
+    <div id="linkNavigations">
+        <a class="linkNavigation" href="/">Home</a>
+        <a class="linkNavigation" href="/animals">Animals</a>
+        <a class="linkNavigation" href="/challenges.html">Challenges</a>
+        <% if(admin.email){ %>
+            <a class="linkNavigation" href="/addAnimal">Add animal</a>
+        <% } %>
+    </div>
+    <% if(!admin.email){ %>
+    <div id="accountNavigation">
+        <button class="accountBtn">My account</button>
+        <div class="accountBox disNone">
+            <button class="signupBtn">Create Account</button>
+            <button class="loginBtn">Login</button>
+        </div>
+    </div>
+    <% }else{%>
+        <div id="accountNavigation">
+            <button class="accountBtn">Hello <%=admin.firstName%></button>
+            <div class="accountBox disNone">
+                <button class="logoutBtn">Logout</button>
+            </div>
+        </div>
+    <%}%>
+    <div id="phoneDrawer">
+        <div class="drawerbar1"></div>
+        <div class="drawerbar2"></div>
+        <div class="drawerbar3 "></div>
+    </div>
+    <div id="moboNav" class="disNone">
+        <ul>
+            <li>
+                <a class="linkNavigation" href="/">Home</a>
+            </li>
+            
+            <li>    
+                <a class="linkNavigation" href="/animals">Animals</a>
+            </li>
+            <li>    
+                <a class="linkNavigation" href="/challenges.html">Challenges</a>
+            </li>
+            <% if(admin.email){ %>
+                <li>
+                    <a class="linkNavigation" href="/addAnimal">Add animal</a>
+                </li>
+            <% } %>
+            <hr/>
+            <% if(!admin.email){ %>
+                <li>
+                    <button class="modalBtn signupBtn">Create Account</button>
+                </li>
+                <li>
+                    <button class="modalBtn loginBtn">Login</button>
+                </li>
+            <% }else{%>
+            <li>
+                <button class="modalBtn logoutBtn">Logout</button>
+            </li>
+            <%}%>
+        </ul>
+    </div>
+</nav>
