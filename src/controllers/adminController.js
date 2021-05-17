@@ -1,5 +1,5 @@
 import Util from '../helpers/Util';
-import AdminService  from '../services/AdminService';
+import AdminService  from '../services/adminService';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
