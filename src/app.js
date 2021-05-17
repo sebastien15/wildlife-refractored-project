@@ -48,8 +48,7 @@ const getAdminDataFromAuth = async (auth)=>{
   admin = adminData.decoded
 }
 app.get("/",(req,res)=>{
-    if(req.headers.cookie.search('auth')) let indexOfauth = req.headers.cookie.search('auth') + 5
-    
+    let indexOfauth = req.headers.cookie.search('auth') + 5
     if (req.headers.cookie[indexOfauth] == undefined) {
       admin = {}
     } else {

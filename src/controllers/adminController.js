@@ -37,9 +37,12 @@ export default class Admin {
     }
     static async LoginAdmin(req,res){
         try {
-           
+            
             const admin = await AdminService.findByEmail(req.body.email);
-            if (!admin) return res.status(404).send('No user found.');
+            if (!admin) {
+                util.setError(401, "we don't have user with this email");
+                return util.send(res)
+            }
             let passwordIsValid = bcrypt.compareSync(req.body.password, admin.password);
             if (!passwordIsValid) {
                 util.setError(401, "email or password don't match our records");
@@ -56,7 +59,7 @@ export default class Admin {
                 expiresIn: 86400 // expires in 24 hours
             });
             res.cookie('auth',token);
-            util.setSuccess(201,"you have successuly logged in ", passwordIsValid,"/animals", token)
+            util.setSuccess(201,"you have successuly logged in ", passwordIsValid,"/", token)
             util.send(res)
         } catch (error) {
             util.setError(500,console.log(error.message));

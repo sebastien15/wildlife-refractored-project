@@ -93,7 +93,8 @@ const saveJsonData = async (url,body) => {
     });
     const content = await rawResponse.json();
     if (content.redirect) window.location.href=content.redirect
-    console.log(content);
+ 
+    // console.log(content);
 };
 const saveFormData = async (url,formData,methodName) => {
     const rawResponse = await fetch(url, {
@@ -121,6 +122,14 @@ signupForm.addEventListener('submit',(e)=>{
         email: email,
         password: password
     }
+    const validationErrors = FormValidation(body); 
+    if(Object.keys(validationErrors).length != 0) {
+        if(validationErrors["firstName"] != undefined) document.querySelector('#firstNameError').innerText = validationErrors["firstName"]
+        if(validationErrors["lastName"] != undefined) document.querySelector('#lastNameError').innerText = validationErrors["lastName"]
+        if(validationErrors["email"] != undefined) document.querySelector('#emailError').innerText = validationErrors["email"]
+        if(validationErrors["password"] != undefined) document.querySelector('#passError').innerText = validationErrors["password"]
+        return
+    }
     const url = "api/admins/create"
     saveJsonData(url,body)
 })
@@ -133,10 +142,11 @@ loginForm.addEventListener('submit',(e)=>{
         password: password
     }
     const validationErrors = FormValidation(body);
-    console.log(validationErrors)
-    if(validationErrors) {
-        document.querySelector('#loginEmailError').innerText = validationErrors["email"]
-        document.querySelector('#loginPassError').innerText = validationErrors["password"]
+    
+    if(Object.keys(validationErrors).length != 0) {
+        if(validationErrors["email"] != undefined) document.querySelector('#loginEmailError').innerText = validationErrors["email"]
+        if(validationErrors["password"] != undefined) document.querySelector('#loginPassError').innerText = validationErrors["password"]
+
         return
     }
     const url = "api/admins/login"
@@ -145,12 +155,15 @@ loginForm.addEventListener('submit',(e)=>{
 
 let validationErrors = {}
 const FormValidation = (inputs)=>{
+
     for(const name in inputs){
+        
         if (inputs[name] ==  "" || inputs[name] == undefined) {
             name != 'fImage' ? validationErrors[name]= `${name} field is required` : validationErrors[name]= `Featured image field is required`
+        }else{
+            delete validationErrors[name]
         }
     }
-    
     return validationErrors
 }
 
@@ -170,10 +183,10 @@ if(saveAnimalForm){
         }
         const validationErorrs = FormValidation(body);
         
-        if(validationErorrs) {
-            document.querySelector('#titleError').innerText = validationErrors["title"]
-            document.querySelector('#descError').innerText = validationErrors["description"]
-            document.querySelector('#fImageError').innerText = validationErrors["fImage"]
+        if(Object.keys(validationErrors).length != 0) {
+            if(validationErrors["title"] != undefined) document.querySelector('#titleError').innerText = validationErrors["title"]
+            if(validationErrors["description"] != undefined) document.querySelector('#descError').innerText = validationErrors["description"]
+            if(validationErrors["fImage"] != undefined) document.querySelector('#fImageError').innerText = validationErrors["fImage"]
             return
         }
         const formData  = new FormData();
@@ -202,7 +215,7 @@ if(editAnimalForm){
         }
         const validationErorrs = FormValidation(body);
         
-        if(validationErorrs) {
+        if(Object.keys(validationErrors).length != 0) {
             console.log(validationErrors)
             if(validationErrors["title"] != undefined) document.querySelector('#titleError').innerText = validationErrors["title"]
             if(validationErrors["description"] != undefined) document.querySelector('#descError').innerText = validationErrors["description"]
