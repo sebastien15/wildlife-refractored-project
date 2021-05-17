@@ -86,7 +86,7 @@ app.get("/editAnimal/:id",AdminAuthentication,(req,res)=>{
   fetchSingle(req.params.id)
     res.render('editAnimal',{animal: animal,admin:admin});
 });
-app.get("/singleAnimal/:id",(req,res)=>{
+app.get("/pets/:id",(req,res)=>{
   let indexOfauth = req.headers.cookie.search('auth') + 5
     if (req.headers.cookie[indexOfauth] == undefined) {
       admin = {}

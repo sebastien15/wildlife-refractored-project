@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run seed && npm run build",
+    "start": "npm run seed && node -r esm src/app.js",
     "dev": "nodemon -r esm src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": " ./build --out-dir build",
+    "migration": "sequelize db:migrate",
+    "migration:reset": "npm run migration:undo && npm run migration && npm run seed",
+    "migration:undo": "./node_modules/.bin/sequelize db:migrate:undo:all",
+    "seed": "npm run migration:undo && npm run migration && npx sequelize db:seed:undo:all && npx sequelize db:seed:all"
   },
   "author": "",
   "license": "ISC",
